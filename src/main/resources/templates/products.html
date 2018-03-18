@@ -111,14 +111,11 @@
                         <div class="row">
                             <div class="product col-xs-12 col-sm-6 col-md-4 col-lg-3" th:each="entry : ${goodses}">
                                 <div class="panel panel-default">
-                                    <div class="panel-body card">
+                                    <div class="card">
                                         <a href="#" th:href="@{'../product/'+ ${entry.id} + '.html'}">
                                             <img src="../../images/clamp.jpg" th:src="@{'../../' + ${entry.thumbnail}}" class="img-responsive" />
                                             <h4 class="title" th:text="${entry.title}"></h4>
                                         </a>
-                                        <h4 class="star">
-                                            <i class="fa fa-star" th:each="star : ${#numbers.sequence(0, entry.stars-1)}"></i>
-                                        </h4>
                                     </div>
                                 </div>
                             </div>

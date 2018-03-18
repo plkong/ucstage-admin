@@ -129,14 +129,29 @@ ul {
     padding: 0 5px 0px 5px;
 }
 
+.product img {
+    height: 190px;
+    width: 250px;
+}
+
 .product .card {
     box-shadow: darkgrey 2px 2px 6px 1px;
+    padding: 3px 1px 1px 1px;
 }
 
 .product .title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #b63b4d;
+    font-weight: bold;
+    color: #f1f0f0;
+    opacity: 0.9;
 }
 
 .product .star {
@@ -160,6 +175,13 @@ ul {
 
 .product-detail .star {
     color: #ed1b24;
+}
+
+.thumbnail {
+    width: 180px;
+    height: 140px;
+    margin-left: 3px;
+    margin-bottom: 5px;
 }
 
 .product-thumbnail {
