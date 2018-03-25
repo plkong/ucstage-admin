@@ -8095,7 +8095,7 @@ body {
     padding-bottom: 50px;
     background-color: #333333;
     color: #fff;
-    background: url(../images/services_background.jpg) no-repeat center center fixed;
+    background: url(../images/bg/bg2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8194,7 +8194,7 @@ body {
 }
 
 .container-services {
-    background: url(../images/services_background.jpg) no-repeat center center fixed;
+    background: url(../images/bg/bg4.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8213,7 +8213,7 @@ body {
 .container-gallery {
     padding-top: 30px;
     padding-bottom: 60px;
-    background: url(../images/gallery_background.jpg) no-repeat center center fixed;
+    background: url(../images/bg/bg3.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8251,10 +8251,15 @@ body {
 
 .container-certifications {
     background-color: #333333;
-    background: url(../images/services_background.jpg) no-repeat center center fixed;
-    color: #fff;
+    background: url(../images/bg/bg4.jpg) no-repeat center center fixed;
     padding-top: 20px;
     padding-bottom: 20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #434343;
+    color: #ffffff;
 }
 
 .container-main {
