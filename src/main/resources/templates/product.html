@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.html" title="UC Stage">
+                <a href="index.html" th:href="@{../../index.html}" title="UC Stage">
                     <img class="img-responsive" src="images/logo.png" th:src="@{../../images/logo.png}" alt="UC Stage" />
                 </a>
             </div>
@@ -82,12 +82,12 @@
     <div class="container-breadcrumbs">
         <ol class="breadcrumb">
             <li>
-                <a href="#">Home</a>
+                <a href="#" th:href="@{../../index.html}">Home</a>
             </li>
             <li>
                 <a href="#">Products</a>
             </li>
-            <li class="active">Aluminun Truss</li>
+            <li class="active" th:href="@{'../../goods/'+ ${goods.category.id} +'.html'}" th:text="${goods.category.label}">Aluminun Truss</li>
         </ol>
     </div>
     <!-- breadcrumbs -->
