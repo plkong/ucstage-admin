@@ -10,7 +10,7 @@
 	<meta name="keywords" content="UC Stage,Aluminum Truss,Truss Clamps , Portable stage,Flight Case,Road Case,Rack Case,Stage Truss,Lighting Truss,Truss Clamp,Mobile Stage,Modular Stage,Staging,Crowd Barrier,Cable Ramp" />
 	<meta name="description" content="UC Stage Professional on produce Aluminum Truss System,Pipe and Drape,Portable stage,Flight Road Case in high quality but wholesale in lowest prices. We are the supplier of world several famous brands" />
     <title>UC Stage</title>
-
+    <link rel="shortcut icon" href="images/u_favicon.ico" th:href="@{../../images/u_favicon.ico}">
     <!-- CSS includes -->
     <link href="third-lib/bootstrap/css/bootstrap.min.css" th:href="@{../../third-lib/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
     <link href="third-lib/fonts/font-awesome/css/font-awesome.min.css" th:href="@{../../third-lib/bootstrap/css/font-awesome.min.css}" rel="stylesheet">
@@ -81,12 +81,9 @@
     <div class="container-breadcrumbs">
         <ol class="breadcrumb">
             <li>
-                <a href="#">Home</a>
+                <a href="#" th:href="@{../../index.html}">Home</a>
             </li>
-            <li>
-                <a href="#">Products</a>
-            </li>
-            <li class="active">Aluminun Truss</li>
+            <li class="active" th:href="@{'../../goods/'+ ${category.id} +'.html'}" th:text="${category.label}">Aluminun Truss</li>
         </ol>
     </div>
     <!-- breadcrumbs -->
