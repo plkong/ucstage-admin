@@ -1,4 +1,4 @@
-package com.utils;
+package com.ucstage.utils;
 
 import javax.servlet.http.HttpServletRequest;
 

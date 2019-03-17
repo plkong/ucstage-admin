@@ -1,11 +1,10 @@
-package com.mapper;
+package com.ucstage.mapper;
 
 
-import com.entity.Category;
+import com.ucstage.entity.Category;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
-import java.util.Map;
 
 public interface CategoryMapper {
     @Select("select * from category")
@@ -25,7 +24,7 @@ public interface CategoryMapper {
              @Result(property = "pId", column = "pId", javaType = Integer.class),
              @Result(property = "remark", column = "remark", javaType = String.class),
              @Result(property = "children", column = "id", javaType = List.class,
-                        many = @Many(select = "com.mapper.CategoryMapper.getByPId"))
+                        many = @Many(select = "CategoryMapper.getByPId"))
             }
     )
     List<Category>  getByPId(Integer pId);
@@ -37,7 +36,7 @@ public interface CategoryMapper {
             @Result(property = "pId", column = "pId", javaType = Integer.class),
             @Result(property = "remark", column = "remark", javaType = String.class),
             @Result(property = "children", column = "id", javaType = List.class,
-                    many = @Many(select = "com.mapper.CategoryMapper.getByPId"))
+                    many = @Many(select = "CategoryMapper.getByPId"))
     })
     Category getById(Integer id);
 

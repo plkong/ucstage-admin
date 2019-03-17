@@ -1,4 +1,4 @@
-package com.utils;
+package com.ucstage.utils;
 
 public class ImgFileObj {
     private String name;

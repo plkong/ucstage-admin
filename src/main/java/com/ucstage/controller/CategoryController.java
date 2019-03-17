@@ -1,10 +1,10 @@
-package com.controller;
+package com.ucstage.controller;
 
-import com.entity.Category;
+import com.ucstage.entity.Category;
+import com.ucstage.mapper.CategoryMapper;
+import com.ucstage.utils.Constants;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.mapper.CategoryMapper;
-import com.utils.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping(path="/category")

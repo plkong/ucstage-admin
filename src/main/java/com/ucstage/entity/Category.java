@@ -1,4 +1,4 @@
-package com.entity;
+package com.ucstage.entity;
 
 
 import java.util.List;

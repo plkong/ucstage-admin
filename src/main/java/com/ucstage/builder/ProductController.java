@@ -1,26 +1,20 @@
-package com.builder;
+package com.ucstage.builder;
 
-import com.controller.CategoryController;
-import com.entity.Category;
-import com.entity.Goods;
-import com.mapper.CategoryMapper;
-import com.mapper.GoodsMapper;
-import com.utils.Constants;
-import org.apache.commons.io.FileUtils;
+import com.ucstage.controller.CategoryController;
+import com.ucstage.entity.Category;
+import com.ucstage.entity.Goods;
+import com.ucstage.mapper.CategoryMapper;
+import com.ucstage.mapper.GoodsMapper;
+import com.ucstage.utils.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 

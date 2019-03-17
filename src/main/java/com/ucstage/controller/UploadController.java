@@ -1,8 +1,8 @@
-package com.controller;
+package com.ucstage.controller;
 
-import com.utils.Constants;
-import com.utils.ImgFileObj;
-import com.utils.UrlTool;
+import com.ucstage.utils.Constants;
+import com.ucstage.utils.ImgFileObj;
+import com.ucstage.utils.UrlTool;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,12 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.UUID;
 
 @Controller
 @RequestMapping(path="/upload")

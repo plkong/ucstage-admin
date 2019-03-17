@@ -1,11 +1,13 @@
-package com.controller;
+package com.ucstage.controller;
 
-import com.entity.Category;
-import com.entity.Goods;
+import com.ucstage.entity.Category;
+import com.ucstage.entity.Goods;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.mapper.GoodsMapper;
-import com.utils.Constants;
+import com.ucstage.mapper.GoodsMapper;
+import com.ucstage.utils.Constants;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,8 @@ public class GoodsController {
     @Autowired
     private GoodsMapper goodsMapper;
 
+    @ApiOperation(value = "添加产品", notes = "")
+    @ApiImplicitParam(name = "goods", value = "产品详细实体goods", required = true, dataType = "Goods")
     @PostMapping(path="/add")
     public @ResponseBody
     String addGoods (@RequestBody Goods goods) {
@@ -36,6 +40,7 @@ public class GoodsController {
         return "Saved";
     }
 
+    @ApiOperation(value = "获取所有产品信息", notes = "")
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Goods> getAllCategorys() {
         List<Category> categories = new ArrayList<Category>();
