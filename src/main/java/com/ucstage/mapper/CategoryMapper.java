@@ -24,7 +24,7 @@ public interface CategoryMapper {
              @Result(property = "pId", column = "pId", javaType = Integer.class),
              @Result(property = "remark", column = "remark", javaType = String.class),
              @Result(property = "children", column = "id", javaType = List.class,
-                        many = @Many(select = "CategoryMapper.getByPId"))
+                        many = @Many(select = "com.ucstage.mapper.CategoryMapper.getByPId"))
             }
     )
     List<Category>  getByPId(Integer pId);
@@ -36,7 +36,7 @@ public interface CategoryMapper {
             @Result(property = "pId", column = "pId", javaType = Integer.class),
             @Result(property = "remark", column = "remark", javaType = String.class),
             @Result(property = "children", column = "id", javaType = List.class,
-                    many = @Many(select = "CategoryMapper.getByPId"))
+                    many = @Many(select = "com.ucstage.mapper.CategoryMapper.getByPId"))
     })
     Category getById(Integer id);
 

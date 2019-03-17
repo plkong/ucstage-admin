@@ -12,7 +12,7 @@ public interface GoodsMapper {
     @Results({
             @Result(property = "id", column = "id", javaType = Integer.class),
             @Result(property = "category", column = "categoryId", javaType = Category.class,
-                    one = @One(select = "CategoryMapper.getById")),
+                    one = @One(select = "com.ucstage.mapper.CategoryMapper.getById")),
             @Result(property = "title", column = "title", javaType = String.class),
             @Result(property = "color", column = "color", javaType = String.class),
             @Result(property = "size", column = "size", javaType = String.class),
@@ -27,7 +27,7 @@ public interface GoodsMapper {
     @Results({
             @Result(property = "id", column = "id", javaType = Integer.class),
             @Result(property = "category", column = "categoryId", javaType = Category.class,
-                    one = @One(select = "CategoryMapper.getById")),
+                    one = @One(select = "com.ucstage.mapper.CategoryMapper.getById")),
             @Result(property = "title", column = "title", javaType = String.class),
             @Result(property = "color", column = "color", javaType = String.class),
             @Result(property = "size", column = "size", javaType = String.class),
@@ -42,7 +42,7 @@ public interface GoodsMapper {
     @Results({
             @Result(property = "id", column = "id", javaType = Integer.class),
             @Result(property = "category", column = "categoryId", javaType = Category.class,
-                    one = @One(select = "CategoryMapper.getById")),
+                    one = @One(select = "com.ucstage.mapper.CategoryMapper.getById")),
             @Result(property = "title", column = "title", javaType = String.class),
             @Result(property = "color", column = "color", javaType = String.class),
             @Result(property = "size", column = "size", javaType = String.class),
@@ -57,7 +57,7 @@ public interface GoodsMapper {
     @Results({
             @Result(property = "id", column = "id", javaType = Integer.class),
             @Result(property = "category", column = "categoryId", javaType = Category.class,
-                    one = @One(select = "CategoryMapper.getById")),
+                    one = @One(select = "com.ucstage.mapper.CategoryMapper.getById")),
             @Result(property = "title", column = "title", javaType = String.class),
             @Result(property = "color", column = "color", javaType = String.class),
             @Result(property = "size", column = "size", javaType = String.class),
@@ -66,7 +66,7 @@ public interface GoodsMapper {
             @Result(property = "thumbnail", column = "thumbnail", javaType = String.class),
             @Result(property = "images", column = "images", javaType = String.class),
             @Result(property = "relativeGoods", column = "categoryId", javaType = List.class,
-                    many = @Many(select = "GoodsMapper.getByCategoryId"))
+                    many = @Many(select = "com.ucstage.mapper.GoodsMapper.getByCategoryId"))
     })
     Goods getById(Integer id);
 
