@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 public interface GoodsMapper {
-    @Select("select * from goods")
+    @Select("select * from goods order by id asc")
     @Results({
             @Result(property = "id", column = "id", javaType = Integer.class),
             @Result(property = "category", column = "categoryId", javaType = Category.class,
@@ -23,7 +23,7 @@ public interface GoodsMapper {
     })
     List<Goods> getAll();
 
-    @Select({"select * from goods where id in (${ids})"})
+    @Select({"select * from goods where id in (${ids}) order by id asc"})
     @Results({
             @Result(property = "id", column = "id", javaType = Integer.class),
             @Result(property = "category", column = "categoryId", javaType = Category.class,
@@ -38,7 +38,7 @@ public interface GoodsMapper {
     })
     List<Goods> getByIds(@Param("ids")String ids);
 
-    @Select("select * from goods where categoryId =#{id}")
+    @Select("select * from goods where categoryId =#{id} order by id asc")
     @Results({
             @Result(property = "id", column = "id", javaType = Integer.class),
             @Result(property = "category", column = "categoryId", javaType = Category.class,

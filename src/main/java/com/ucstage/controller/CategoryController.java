@@ -16,7 +16,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping(path="/category")
-public class CategoryController {
+public class  CategoryController {
     private static Logger LOGGER = LoggerFactory.getLogger(CategoryController.class);
     @Autowired
     private CategoryMapper categoryMapper;
@@ -27,6 +27,14 @@ public class CategoryController {
         LOGGER.info(category.toString());
         categoryMapper.insert(category);
         return "Saved";
+    }
+
+    @GetMapping(path="/{id}")
+    public @ResponseBody
+    Category getCategory (@PathVariable int id) {
+        LOGGER.info("get id : " + id);
+        Category category = categoryMapper.getById(id);
+        return category;
     }
 
     @DeleteMapping(path="/{id}")

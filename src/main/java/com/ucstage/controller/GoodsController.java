@@ -67,7 +67,7 @@ public class GoodsController {
     PageInfo<Goods> queryGoods(@RequestParam int pageNum, @RequestParam int pageSize, @RequestParam Integer categoryId) {
         PageHelper.startPage(pageNum, pageSize);
         List<Goods> cats = null;
-        if (categoryId == null) {
+        if (categoryId == 0) {
             cats = goodsMapper.getAll();
         } else {
             cats = goodsMapper.getByCategoryId(categoryId);
@@ -82,6 +82,12 @@ public class GoodsController {
     public @ResponseBody
     String updateGoods (@RequestBody Goods goods) {
         LOGGER.info(goods.toString());
+        // 缩略图默认选择第一张图
+        String images = goods.getImages();
+        if (images != null) {
+            String[] imageArray = images.split(";");
+            goods.setThumbnail(imageArray[0]);
+        }
         goodsMapper.update(goods);
         return "updated";
     }

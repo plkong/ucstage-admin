@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 public interface CategoryMapper {
-    @Select("select * from category")
+    @Select("select * from category ORDER BY sort")
     @Results({
             @Result(property = "id", column = "id", javaType = Integer.class),
             @Result(property = "label", column = "label", javaType = String.class),
@@ -16,7 +16,7 @@ public interface CategoryMapper {
     })
     List<Category> getAll();
 
-    @Select("select * from category where pId =#{pId}")
+    @Select("select * from category where pId =#{pId} ORDER BY sort")
     @Results(
             {
              @Result(property = "id", column = "id", javaType = Integer.class),
