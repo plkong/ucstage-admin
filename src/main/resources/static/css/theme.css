@@ -8095,7 +8095,7 @@ body {
     padding-bottom: 50px;
     background-color: #333333;
     color: #fff;
-    background: url(../images/bg/bg2.jpg) no-repeat center center fixed;
+    /*background: url(../images/bg/bg2.jpg) no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8194,7 +8194,7 @@ body {
 }
 
 .container-services {
-    background: url(../images/bg/bg4.jpg) no-repeat center center fixed;
+    /*background: url(../images/bg/bg4.jpg) no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8213,7 +8213,7 @@ body {
 .container-gallery {
     padding-top: 30px;
     padding-bottom: 60px;
-    background: url(../images/bg/bg3.jpg) no-repeat center center fixed;
+    /*background: url(../images/bg/bg3.jpg) no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8251,7 +8251,7 @@ body {
 
 .container-certifications {
     background-color: #333333;
-    background: url(../images/bg/bg4.jpg) no-repeat center center fixed;
+    /*background: url(../images/bg/bg4.jpg) no-repeat center center fixed;*/
     padding-top: 20px;
     padding-bottom: 20px;
     -webkit-background-size: cover;
@@ -8417,6 +8417,34 @@ a.footer-socialicon {
     color: #ffffff;
 }
 
+@-webkit-keyframes  shineRed {
+from { -webkit-box-shadow: 0 0 5px #bbb; }
+50% { -webkit-box-shadow: 0 0 10px #000000; }
+to { -webkit-box-shadow: 0 0 5px #bbb; }
+}
+@-webkit-keyframes shineBlue {
+        from { -webkit-box-shadow: 0 0 9px #333; }
+        50% { -webkit-box-shadow: 0 0 18px blue; }
+        to { -webkit-box-shadow: 0 0 9px #333; }
+}
+
+a.picbtn {
+    color: #ffffff;
+	background-color: #000000;
+	border-radius:5px;  
+	padding: 5px 5px 5px 5px;
+    text-decoration: none;
+}
+
+.picbtn:hover {
+    color: #ffffff;
+    background-color: #000000;
+	-webkit-animation-name: shineRed; 
+-webkit-animation-duration: 3s;
+-webkit-animation-iteration-count: infinite;
+padding: 5px 5px 5px 5px;
+border-radius:5px;  
+}
 .text-justify {
     text-align: justify;
 }
